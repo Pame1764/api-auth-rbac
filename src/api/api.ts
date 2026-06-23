@@ -1,4 +1,4 @@
-const BASE_AUTH = 'http://localhost:3000';
+const BASE_AUTH = 'http://localhost:8000';
 const BASE_PRODUCT = 'http://localhost:3001';
 
 function getAuthHeaders(): HeadersInit {
