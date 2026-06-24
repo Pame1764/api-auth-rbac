@@ -13,12 +13,14 @@ jobs:
     name: SonarQube
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
+      # Versión fija de checkout mediante SHA
+      - uses: actions/checkout@b4ffde65f46336abfa881617b83d7f16871a257c
         with:
           fetch-depth: 0
-      
+          
+      # Versión fija de SonarQube Scan mediante SHA
       - name: SonarQube Scan
-        uses: SonarSource/sonarqube-scan-action@v5.0.0
+        uses: SonarSource/sonarqube-scan-action@a870d10e08f830386a34c5678257053e19808381
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
